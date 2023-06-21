@@ -78,7 +78,7 @@ class _MainScreenState extends State<MainScreen> {
                             },
                           ),
                         ),
-                        child: const Icon(Icons.camera_outlined)),
+                        child: const Icon(Icons.explore_outlined)),
                     const CategoryButton(
                       category: '전체',
                     ),
@@ -192,7 +192,8 @@ class _MainScreenState extends State<MainScreen> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.red,
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Colors.black,
         items: const [
           BottomNavigationBarItem(
             icon: Icon(
@@ -213,7 +214,7 @@ class _MainScreenState extends State<MainScreen> {
               Icons.add_circle_outline,
               color: Colors.white,
             ),
-            label: '1',
+            label: '',
           ),
           BottomNavigationBarItem(
             icon: Icon(
