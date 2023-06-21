@@ -184,7 +184,8 @@ class _MainScreenState extends State<MainScreen> {
                         Shorts(
                             thumbnailUrl:
                                 'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
-                            title: 'title',
+                            title:
+                                'titletitletitletitletitletitletitletitletitletitletitletitletitle',
                             views: 5),
                         Shorts(
                             thumbnailUrl:
@@ -374,38 +375,43 @@ class Shorts extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(4.0),
-      child: Stack(
-        alignment: Alignment.bottomLeft,
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(7),
-            child: SizedBox(
-              height: 230,
-              width: 150,
-              child: Image.network(
-                thumbnailUrl,
-                fit: BoxFit.cover,
+      child: SizedBox(
+        height: 230,
+        width: 150,
+        child: Stack(
+          alignment: Alignment.bottomLeft,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(7),
+              child: SizedBox(
+                height: 230,
+                width: 150,
+                child: Image.network(
+                  thumbnailUrl,
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(8.0, 1.0, 1.0, 36.0),
-            child: SizedBox(
-              child: Text(
-                title,
-                style: const TextStyle(fontSize: 16),
-                maxLines: 2,
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SizedBox(
+            Padding(
+              padding: const EdgeInsets.fromLTRB(8.0, 1.0, 1.0, 36.0),
+              child: SizedBox(
                 child: Text(
-              '조회수 $views 회',
-            )),
-          )
-        ],
+                  title,
+                  style: const TextStyle(fontSize: 16),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                  child: Text(
+                '조회수 $views 회',
+              )),
+            )
+          ],
+        ),
       ),
     );
   }
