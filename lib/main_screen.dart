@@ -99,6 +99,30 @@ class _MainScreenState extends State<MainScreen> {
                     const CategoryButton(
                       category: '액션',
                     ),
+                    const CategoryButton(
+                      category: '액션',
+                    ),
+                    const CategoryButton(
+                      category: '액션',
+                    ),
+                    const CategoryButton(
+                      category: '액션',
+                    ),
+                    const CategoryButton(
+                      category: '액션',
+                    ),
+                    const CategoryButton(
+                      category: '액션',
+                    ),
+                    const CategoryButton(
+                      category: '액션',
+                    ),
+                    const CategoryButton(
+                      category: '액션',
+                    ),
+                    const CategoryButton(
+                      category: '액션',
+                    ),
                   ],
                 ),
               ),
@@ -143,6 +167,26 @@ class _MainScreenState extends State<MainScreen> {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
+                        Shorts(
+                            thumbnailUrl:
+                                'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
+                            title: 'title',
+                            views: 'views'),
+                        Shorts(
+                            thumbnailUrl:
+                                'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
+                            title: 'title',
+                            views: 'views'),
+                        Shorts(
+                            thumbnailUrl:
+                                'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
+                            title: 'title',
+                            views: 'views'),
+                        Shorts(
+                            thumbnailUrl:
+                                'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
+                            title: 'title',
+                            views: 'views'),
                         Shorts(
                             thumbnailUrl:
                                 'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
