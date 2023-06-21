@@ -133,6 +133,8 @@ class _MainScreenState extends State<MainScreen> {
                     'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
                 title: 'title',
                 nickName: 'nickName',
+                time: 2,
+                views: 10,
               ),
               const Video(
                 thumbnailImgUrl:
@@ -141,6 +143,18 @@ class _MainScreenState extends State<MainScreen> {
                     'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
                 title: 'title',
                 nickName: 'nickName',
+                time: 2,
+                views: 10,
+              ),
+              const Video(
+                thumbnailImgUrl:
+                    'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
+                profileImgUrl:
+                    'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
+                title: 'title',
+                nickName: 'nickName',
+                time: 2,
+                views: 10,
               ),
               const Column(
                 children: [
@@ -171,47 +185,47 @@ class _MainScreenState extends State<MainScreen> {
                             thumbnailUrl:
                                 'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
                             title: 'title',
-                            views: 'views'),
+                            views: 5),
                         Shorts(
                             thumbnailUrl:
                                 'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
                             title: 'title',
-                            views: 'views'),
+                            views: 5),
                         Shorts(
                             thumbnailUrl:
                                 'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
                             title: 'title',
-                            views: 'views'),
+                            views: 5),
                         Shorts(
                             thumbnailUrl:
                                 'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
                             title: 'title',
-                            views: 'views'),
+                            views: 5),
                         Shorts(
                             thumbnailUrl:
                                 'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
                             title: 'title',
-                            views: 'views'),
+                            views: 5),
                         Shorts(
                             thumbnailUrl:
                                 'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
                             title: 'title',
-                            views: 'views'),
+                            views: 5),
                         Shorts(
                             thumbnailUrl:
                                 'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
                             title: 'title',
-                            views: 'views'),
+                            views: 5),
                         Shorts(
                             thumbnailUrl:
                                 'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
                             title: 'title',
-                            views: 'views'),
+                            views: 5),
                         Shorts(
                             thumbnailUrl:
                                 'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
                             title: 'title',
-                            views: 'views'),
+                            views: 5),
                       ],
                     ),
                   ),
@@ -224,6 +238,8 @@ class _MainScreenState extends State<MainScreen> {
                     'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
                 title: 'title',
                 nickName: 'nickName',
+                time: 2,
+                views: 10,
               ),
               const Video(
                 thumbnailImgUrl:
@@ -232,6 +248,8 @@ class _MainScreenState extends State<MainScreen> {
                     'https://cdn.pixabay.com/photo/2023/06/15/16/51/finch-8066014_1280.jpg',
                 title: 'title',
                 nickName: 'nickName',
+                time: 2,
+                views: 10,
               ),
             ],
           ),
@@ -287,6 +305,8 @@ class Video extends StatelessWidget {
   final String profileImgUrl;
   final String nickName;
   final String title;
+  final int views;
+  final int time;
 
   const Video({
     Key? key,
@@ -294,6 +314,8 @@ class Video extends StatelessWidget {
     required this.profileImgUrl,
     required this.title,
     required this.nickName,
+    required this.views,
+    required this.time,
   }) : super(key: key);
 
   @override
@@ -319,9 +341,10 @@ class Video extends StatelessWidget {
                   ),
                 ),
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(nickName),
                     Text(title),
+                    Text('$nickName  .  조회수 $views  .  $time 분전'),
                   ],
                 ),
                 const Icon(
@@ -339,7 +362,7 @@ class Video extends StatelessWidget {
 class Shorts extends StatelessWidget {
   final String thumbnailUrl;
   final String title;
-  final String views;
+  final int views;
   const Shorts(
       {Key? key,
       required this.thumbnailUrl,
@@ -371,6 +394,7 @@ class Shorts extends StatelessWidget {
               child: Text(
                 title,
                 style: const TextStyle(fontSize: 16),
+                maxLines: 2,
               ),
             ),
           ),
